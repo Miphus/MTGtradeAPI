@@ -13,7 +13,7 @@ namespace API.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("by-set/{setId}")]
+        [HttpGet("GetCardsBySetId/{setId}")]
         public async Task<IActionResult> GetCardsBySetId(Guid setId)
         {
             var result = await _mediator.Send(new GetCardsBySetIdQuery(setId));
